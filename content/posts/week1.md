@@ -1,3 +1,10 @@
+---
+title: "Week 1"
+date: 2026-08-22
+draft: false
+---
+
+
 ## Thinking, thinking and thinking
 
 This week we were given the task of starting our semester project, we have to build our first API and doing it solo!
