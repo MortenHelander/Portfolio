@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blowfish</title>
+    <title>Morten Helander</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content on Blowfish</description>
+    <description>Recent content on Morten Helander</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>morten.helander@hotmail.com (Morten Helander)</managingEditor>
     <webMaster>morten.helander@hotmail.com (Morten Helander)</webMaster>
     <copyright>© 2026 Morten Helander</copyright>
-    <lastBuildDate>Sat, 22 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Aug 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 2</title>
+      <link>http://localhost:1313/posts/week2/</link>
+      <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
+      <author>morten.helander@hotmail.com (Morten Helander)</author>
+      <guid>http://localhost:1313/posts/week2/</guid>
+      <description></description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/week2/featured.png" />
+    </item>
     
     <item>
       <title>Week 1</title>
@@ -18,7 +28,7 @@
       <author>morten.helander@hotmail.com (Morten Helander)</author>
       <guid>http://localhost:1313/posts/week1/</guid>
       <description></description>
-      
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/week1/featured.jpg" />
     </item>
     
   </channel>
