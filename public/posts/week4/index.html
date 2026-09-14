@@ -15,8 +15,8 @@
 
   
   
-    <title>Week 3 &middot; Morten Helander</title>
-    <meta name="title" content="Week 3 &middot; Morten Helander">
+    <title>Week 4 &middot; Morten Helander</title>
+    <meta name="title" content="Week 4 &middot; Morten Helander">
   
 
   
@@ -34,7 +34,7 @@
   
   
   
-  <link rel="canonical" href="http://localhost:1313/posts/week3/">
+  <link rel="canonical" href="http://localhost:1313/posts/week4/">
   
   
 
@@ -45,20 +45,18 @@
   
 
   
-  <meta property="og:url" content="http://localhost:1313/posts/week3/">
+  <meta property="og:url" content="http://localhost:1313/posts/week4/">
 	<meta property="og:site_name" content="Morten Helander">
-	<meta property="og:title" content="Week 3">
+	<meta property="og:title" content="Week 4">
 	<meta property="og:locale" content="en">
 	<meta property="og:type" content="article">
 		<meta property="article:section" content="posts">
-		<meta property="article:published_time" content="2026-09-06T00:00:00+00:00">
-		<meta property="article:modified_time" content="2026-09-06T00:00:00+00:00">
-		<meta property="og:image" content="http://localhost:1313/posts/week3/featured.png">
+		<meta property="article:published_time" content="2026-09-12T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-09-12T00:00:00+00:00">
 
   
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:image" content="http://localhost:1313/posts/week3/featured.png">
-	<meta name="twitter:title" content="Week 3">
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Week 4">
 
   
   
@@ -69,9 +67,15 @@
     
   
     
-  
+      
     
   
+    
+      
+    
+  
+  
+    
   
 
   
@@ -214,26 +218,26 @@
     "@context": "https://schema.org",
     "@type": "Article",
     "articleSection": "Blogposts",
-    "name": "Week 3",
-    "headline": "Week 3",
+    "name": "Week 4",
+    "headline": "Week 4",
     
     "inLanguage": "en",
-    "url" : "http://localhost:1313/posts/week3/",
+    "url" : "http://localhost:1313/posts/week4/",
     "author" : {
       "@type": "Person",
       "name": "Morten Helander",
       "image": "http://localhost:1313/img/logo.jpg"
     },
     "copyrightYear": "2026",
-    "dateCreated": "2026-09-06T00:00:00\u002b00:00",
-    "datePublished": "2026-09-06T00:00:00\u002b00:00",
+    "dateCreated": "2026-09-12T00:00:00\u002b00:00",
+    "datePublished": "2026-09-12T00:00:00\u002b00:00",
     
-    "dateModified": "2026-09-06T00:00:00\u002b00:00",
+    "dateModified": "2026-09-12T00:00:00\u002b00:00",
     
     
     
-    "mainEntityOfPage": "http://localhost:1313/posts/week3/",
-    "wordCount":  367 
+    "mainEntityOfPage": "http://localhost:1313/posts/week4/",
+    "wordCount":  198 
   }]
   </script>
 
@@ -550,7 +554,7 @@
     <header id="single_header" class="mt-5 max-w-prose">
       
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
-        Week 3
+        Week 4
       </h1>
       <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
         
@@ -602,7 +606,7 @@
   <div class="flex flex-row flex-wrap items-center">
     
     
-      <time datetime="2026-09-06T00:00:00&#43;00:00">6 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>367 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">2 mins</span>
+      <time datetime="2026-09-12T00:00:00&#43;00:00">12 September 2026</time><span class="px-2 text-primary-500">&middot;</span><span>198 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">1 min</span>
     
 
     
@@ -694,20 +698,14 @@
         
 
         <div class="article-content max-w-prose mb-20">
-          
-<h2 class="relative group">Baby steps
-    <div id="baby-steps" class="anchor"></div>
-    
-    <span
-        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
-        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#baby-steps" aria-label="Anchor">#</a>
-    </span>
-    
-</h2>
-<p>Today I realized that my Game entity had to have an eager fetchtype of it’s moves, which also makes sense. As soon as a game is either started or loaded by any player and at all times, you need to keep track of all the moves of the game, to either show the board state or later feed the AI the board state and history.</p>
-<p>I’ve also added some logic in the Game class to make a move and shift turn I was considering putting it into a service class, but at least for now I feel it makes the most sense to keep it in the entity class, since it only handles pure java entities and hopefully makes sure a move can’t be falsely added somewhere else by a mistake.</p>
-<p>I really banged my head into a wall when trying to test a method that gets all games by a specific userID. Firstly it took me a bit to figure out I couldn’t just instantiate the user object and use my java add methods on it, because what I’m testing is the database… After a long while however I thought I managed to fix it by changing my test populator a little, but using the correct id (1), still didn’t yield any results until I realized I had added two populators a game one and a user one. However frustrating it can be to work on something new it’s always when you finally figure out why it doesn&rsquo;t work that you begin to understand the concepts better in my opinion.</p>
-<p>I’ve also finished working on the last couple of DAO’s (at least for now they are the last) and have decided to not use a generic interface for all of them, since I believe it’s better practice to not always be able to update or delete everything. For a powerup for example, it doesn’t make sense that you can delete it since it’s always attached to a player which is always attached to both a user and a game, so if I ever wanted to delete a player or a game from the database then the attached moves and powerups should be deleted.</p>
+          <p>Integration and concurrency
+This week we learned about concurrency which was a very interesting topic mostly because it&rsquo;s been one of the more technically heavy we&rsquo;ve had so far. It&rsquo;s also been a bit more difficult to instantly know where I should use it in the project. For now I&rsquo;m hoping to be able use it effectively when players makes a move or have to load games.
+I also expect when I get further into the process that I will have to use threads to manage two players communicating to the server when using websocket but honestly I have no idea how it works yet.</p>
+<p>For this weeks work, I&rsquo;ve begun implementing my existing chess game-engine into my school project, along the way I&rsquo;m refactoring quite a few things.</p>
+<ul>
+<li>SVG images existing directly on the Piece inheritor classes, this was fine in my for fun single game program but for an online game it makes no sense that the backend.</li>
+<li>Board class clean-up, the current state of the board class is a little bit of a mess and it contains too many responsibilities, I&rsquo;m creating a few services to split some seperation of concern, for example a MoveExecutor.</li>
+</ul>
 
           
           
@@ -737,7 +735,7 @@
           
             <a
               class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
-              href="/posts/week4/">
+              href="/posts/week3/">
               <span class="leading-6">
                 <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Week 3
               </span>
