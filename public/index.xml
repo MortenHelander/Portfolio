@@ -9,7 +9,17 @@
     <managingEditor>morten.helander@hotmail.com (Morten Helander)</managingEditor>
     <webMaster>morten.helander@hotmail.com (Morten Helander)</webMaster>
     <copyright>© 2026 Morten Helander</copyright>
-    <lastBuildDate>Sat, 12 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 5</title>
+      <link>http://localhost:1313/posts/week5/</link>
+      <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
+      <author>morten.helander@hotmail.com (Morten Helander)</author>
+      <guid>http://localhost:1313/posts/week5/</guid>
+      <description></description>
+      
+    </item>
     
     <item>
       <title>Week 4</title>
