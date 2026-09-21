@@ -1,0 +1,23 @@
+{{/* Read .Inner so Hugo allows paired shortcode tags in Markdown */}}
+{{ $inner := .Inner }}
+{{ $project := .Get "project" }}
+{{ $pages := where .Site.RegularPages "Section" "updates" }}
+{{ if $project }}
+  {{ $pages = where $pages "Params.project" $project }}
+{{ end }}
+{{ $timelineItems := "" }}
+{{ range sort $pages "Weight" "desc" }}
+  {{ $icon := .Params.icon | default "star" }}
+  {{ $header := .Params.header | default .Title }}
+  {{ $subheader := .Params.subheader | default "" }}
+  {{ $badge := .Params.badge | default "" }}
+  {{ $anchor := $header | urlize }}
+  {{ $item := printf `<div id="%s">{{< timelineItem icon="%s" header="%s" subheader="%s" badge="%s" >}} %s {{< /timelineItem >}}</div>` $anchor $icon $header $subheader $badge .Content }}
+  {{ $timelineItems = printf "%s\n%s" $timelineItems $item }}
+{{ end }}
+{{ $fullTimeline := printf "{{< timeline >}} %s {{< /timeline >}}" $timelineItems }}
+
+<!-- Explicitly include timeline classes so Tailwind doesn't purge them on GitHub Actions -->
+<div class="my-6 timeline relative pl-4 border-l-2 border-primary-500">
+  {{ $fullTimeline | $.Page.RenderString }}
+</div>

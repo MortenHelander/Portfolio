@@ -2,63 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Morten Helander</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:59355/</link>
     <description>Recent content on Morten Helander</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <managingEditor>morten.helander@hotmail.com (Morten Helander)</managingEditor>
     <webMaster>morten.helander@hotmail.com (Morten Helander)</webMaster>
     <copyright>© 2026 Morten Helander</copyright>
-    <lastBuildDate>Sun, 20 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 20 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:59355/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Week 5</title>
-      <link>http://localhost:1313/posts/week5/</link>
+      <link>http://localhost:59355/updates/chessapi/week5/</link>
       <pubDate>Sun, 20 Sep 2026 00:00:00 +0000</pubDate>
       <author>morten.helander@hotmail.com (Morten Helander)</author>
-      <guid>http://localhost:1313/posts/week5/</guid>
-      <description></description>
-      
+      <guid>http://localhost:59355/updates/chessapi/week5/</guid>
+      <description>Project week</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:59355/updates/chessapi/week5/featured.png" />
     </item>
     
     <item>
       <title>Week 4</title>
-      <link>http://localhost:1313/posts/week4/</link>
+      <link>http://localhost:59355/updates/chessapi/week4/</link>
       <pubDate>Sat, 12 Sep 2026 00:00:00 +0000</pubDate>
       <author>morten.helander@hotmail.com (Morten Helander)</author>
-      <guid>http://localhost:1313/posts/week4/</guid>
-      <description></description>
-      
+      <guid>http://localhost:59355/updates/chessapi/week4/</guid>
+      <description>Concurrency and clean up</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:59355/updates/chessapi/week4/featured.png" />
     </item>
     
     <item>
       <title>Week 3</title>
-      <link>http://localhost:1313/posts/week3/</link>
+      <link>http://localhost:59355/updates/chessapi/week3/</link>
       <pubDate>Sun, 06 Sep 2026 00:00:00 +0000</pubDate>
       <author>morten.helander@hotmail.com (Morten Helander)</author>
-      <guid>http://localhost:1313/posts/week3/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/week3/featured.png" />
+      <guid>http://localhost:59355/updates/chessapi/week3/</guid>
+      <description>Data integration and testing</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:59355/updates/chessapi/week3/featured.png" />
     </item>
     
     <item>
       <title>Week 2</title>
-      <link>http://localhost:1313/posts/week2/</link>
+      <link>http://localhost:59355/updates/chessapi/week2/</link>
       <pubDate>Fri, 28 Aug 2026 00:00:00 +0000</pubDate>
       <author>morten.helander@hotmail.com (Morten Helander)</author>
-      <guid>http://localhost:1313/posts/week2/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/week2/featured.png" />
+      <guid>http://localhost:59355/updates/chessapi/week2/</guid>
+      <description>Baby steps</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:59355/updates/chessapi/week2/featured.png" />
+    </item>
+    
+    <item>
+      <title>Chess Backend School Project</title>
+      <link>http://localhost:59355/blog/chessapi/</link>
+      <pubDate>Mon, 24 Aug 2026 00:00:00 +0000</pubDate>
+      <author>morten.helander@hotmail.com (Morten Helander)</author>
+      <guid>http://localhost:59355/blog/chessapi/</guid>
+      <description>A school project for making chess api</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:59355/blog/chessapi/featured.jpg" />
     </item>
     
     <item>
       <title>Week 1</title>
-      <link>http://localhost:1313/posts/week1/</link>
+      <link>http://localhost:59355/updates/chessapi/week1/</link>
       <pubDate>Sat, 22 Aug 2026 00:00:00 +0000</pubDate>
       <author>morten.helander@hotmail.com (Morten Helander)</author>
-      <guid>http://localhost:1313/posts/week1/</guid>
-      <description></description>
-      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/posts/week1/featured.jpg" />
+      <guid>http://localhost:59355/updates/chessapi/week1/</guid>
+      <description>Thinking, thinking and thinking</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:59355/updates/chessapi/week1/featured.jpg" />
     </item>
     
   </channel>
