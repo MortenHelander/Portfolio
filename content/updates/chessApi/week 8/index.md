@@ -1,6 +1,6 @@
 ---
-title: "Week 7"
-date: 2026-10-04
+title: "Week 8"
+date: 2026-10-07
 draft: false
 project: "chessapi"
 header: "WeekEightPartOne"
@@ -18,30 +18,33 @@ At the beginning of this week I remembered my poorly constructed and forgotten U
 
 Oct 7, 2026 · @Morten
 
-38 user stories in six epics, covering everything from classic rules to power-ups. Status reflects the code review of ChessBackendAPI\_3 done today: classic rules are mostly done, real-time play and accounts are not started.
-
 ## How to read this
 
 - **Format:** As a *role*, I want *goal*, so that *benefit*. Acceptance criteria are written as short testable checks, so they translate directly into JUnit or RestAssured tests.
-- **Roles:** *Player* (anyone in a game), *Registered user* (has an account), *Spectator* (watches a game), *Developer* (you, for technical stories that support the others).
+- **Roles:** *Player* (anyone in a game), *Registered user* (has an account), *Spectator* (watches a game), *Developer* (me).
 - **Priority (MoSCoW):** Must = needed for a playable classic game over WebSocket. Should = expected for the semester hand-in. Could = nice to have. Won't = parked for now.
-- **Status:** set from the code as it stands; change the dropdowns as you go.
+- **Status:** Set from the code as it currently stands, the different status codes are: Not started(depending on the priority status, may or may not be started depending on time left) Done(code works as intended and is tested thoroughly, might go to "has bugs later).
+
+1. Not started: depending on the priority status, may or may not be started depending on time left.
+2. In progress: work on the acceptance criteria has begun, the process may or may not be in standby.
+3. Has bugs: the task either went from in progress and is now almost "done", but has bugs that needs fixing, or the task went from "done" into "has bugs" after new discovery of errors.
+4. Done: code works as intended and is tested thoroughly, might go to "has bugs later.
 
 ## Epic 1: Classic chess rules
 
-The engine is the strongest part of the project: 5 of 9 stories are done, and the 3 with bugs each need a small, targeted fix.
+The engine is the strongest part of the project: 7 of 9 stories are done, and the 3 with bugs each need a small, targeted fix.
 
-| ID    | User story                                                                                                                                      | Acceptance criteria                                                                                                                                                                                                                                 | Priority | Status      |
-| ----- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| CR-01 | As a player, I want each piece to move according to the rules, so that the game is real chess.                                                  | All six piece types only reach legal squares; pieces cannot jump except the knight; own pieces block, enemy pieces can be captured.                                                                                                                 | Must     | Done        |
-| CR-02 | As a player, I want moves that leave my king in check to be rejected, so that I cannot make an illegal move by accident.                        | Move that exposes or keeps own king in check returns 400 "Illegal move"; board and turn are unchanged.                                                                                                                                              | Must     | Done        |
-| CR-03 | As a player, I want to castle on both sides, so that I can use a standard opening plan.                                                         | Allowed only if king and rook have not moved, squares between are empty, and king is not in, through or into check; rook lands on the correct square. Bugs: castling allowed with an enemy piece on G1/B1, and through a square attacked by a pawn. | Must     | Has bugs    |
-| CR-04 | As a player, I want to capture en passant, so that pawn play follows the full rules.                                                            | Only on the move right after the enemy double step; the captured pawn is removed. Bug: en passant that exposes own king is accepted.                                                                                                                | Must     | Has bugs    |
-| CR-05 | As a player, I want to choose which piece my pawn promotes to, so that I can underpromote when it matters.                                      | Pawn on last rank requires q, r, b or n; missing letter returns 400; stored UCI ends with the lowercase letter.                                                                                                                                     | Must     | Done        |
-| CR-06 | As a player, I want the game to end at checkmate, so that a winner is declared.                                                                 | Status becomes CHECKMATE, winner colour is set, further moves return 400 "Game is finished".                                                                                                                                                        | Must     | Done        |
-| CR-07 | As a player, I want stalemate to end the game as a draw, so that the result is correct.                                                         | Status becomes DRAW with winner NO\_COLOR; GET /games and GET /games/{id} still return 200. Bug: winner is stored as null and the GET endpoints return 500.                                                                                         | Must     | Has bugs    |
-| CR-08 | As a player, I want to be told when my king is in check, so that the frontend can warn me.                                                      | Every move response and board state includes an inCheck flag for the side to move.                                                                                                                                                                  | Must     | Not started |
-| CR-09 | As a player, I want automatic draws by threefold repetition, the fifty-move rule and insufficient material, so that games cannot go on forever. | Each rule ends the game as DRAW with a reason; one test per rule.                                                                                                                                                                                   | Should   | Not started |
+| ID | User story | Acceptance criteria | Priority | Status |
+| --- | --- | --- | --- | --- |
+| CR-01 | As a player, I want each piece to move according to the rules, so that the game is real chess. | All six piece types only reach legal squares; pieces cannot jump except the knight; own pieces block, enemy pieces can be captured. | Must | Done |
+| CR-02 | As a player, I want moves that leave my king in check to be rejected, so that I cannot make an illegal move by accident. | Move that exposes or keeps own king in check returns 400 "Illegal move"; board and turn are unchanged. | Must | Done |
+| CR-03 | As a player, I want to castle on both sides, so that I can use a standard opening plan. | Allowed only if king and rook have not moved, squares between are empty, and king is not in, through or into check; rook lands on the correct square. Bugs: castling allowed with an enemy piece on G1/B1, and through a square attacked by a pawn. | Must | Done |
+| CR-04 | As a player, I want to capture en passant, so that pawn play follows the full rules. | Only on the move right after the enemy double step; the captured pawn is removed. Bug: en passant that exposes own king is accepted. | Must | Done |
+| CR-05 | As a player, I want to choose which piece my pawn promotes to, so that I can underpromote when it matters. | Pawn on last rank requires q, r, b or n; missing letter returns 400; stored UCI ends with the lowercase letter. | Must | Done |
+| CR-06 | As a player, I want the game to end at checkmate, so that a winner is declared. | Status becomes CHECKMATE, winner colour is set, further moves return 400 "Game is finished". | Must | Done |
+| CR-07 | As a player, I want stalemate to end the game as a draw, so that the result is correct. | Status becomes DRAW with winner NO\_COLOR; GET /games and GET /games/{id} still return 200. Bug: winner is stored as null and the GET endpoints return 500. | Must | Done |
+| CR-08 | As a player, I want to be told when my king is in check, so that the frontend can warn me. | Every move response and board state includes an inCheck flag for the side to move. | Must | Not started |
+| CR-09 | As a player, I want automatic draws by threefold repetition, the fifty-move rule and insufficient material, so that games cannot go on forever. | Each rule ends the game as DRAW with a reason; one test per rule. | Should | Not started |
 
 ## Epic 2: Game lifecycle
 
@@ -70,7 +73,7 @@ This is the semester goal and nothing exists yet, but moveAndShiftTurn can be re
 | WS-05 | As a player, I want to rejoin after losing my connection, so that a network glitch does not cost me the game. | Reconnecting to the same game sends the full current board; moves made while away are not lost. | Should | Not started |
 | WS-06 | As a player, I want to know when my opponent disconnects, so that I know why they are not moving. | On close, the other player receives an opponent-left message; on return, an opponent-back message. | Should | Not started |
 | WS-07 | As a spectator, I want to watch a game live, so that I can follow friends' games. | Spectator connection receives all broadcasts; any move message from a spectator is rejected. | Could | Not started |
-| WS-08 | As a developer, I want two moves sent at the same moment to be handled safely, so that the database never holds two moves for one turn. | The @Version conflict returns a clear error (409 over HTTP, an error message over WebSocket) instead of 500; only the first move is saved. | Must | In progress |
+| WS-08 | As a developer, I want two moves sent at the same moment to be handled safely, so that the database never holds two moves for one turn. | The server responds with HTTP response 409 conflict if two moves are send simountaniously; only the first move is saved. | Must | In progress |
 
 ## Epic 4: Users and authentication
 
@@ -89,13 +92,13 @@ The entities and DAOs are in place, but UserController is commented out and ther
 
 The data model is ready (PlayerPowerUp, PowerUpType, PowerUpStatus), but no game logic uses it yet. PU-05 matters most: random effects break the replay-based board unless they are stored.
 
-| ID    | User story                                                                                                                         | Acceptance criteria                                                                                                                                                                                                                                     | Priority | Status      |
-| ----- | ---------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------- |
-| PU-01 | As a player, I want to start a FUN mode game, so that I can play chess with power-ups.                                             | POST /games with gameMode FUN creates the game; CLASSIC games never hand out power-ups.                                                                                                                                                                 | Should   | Not started |
-| PU-02 | As a player, I want instant power-ups to take effect when I earn them, so that the game gets a surprise twist.                     | KILL\_RANDOM\_PIECE, GAIN\_RANDOM\_PIECE and RANDOMIZE\_BOARD apply at once and are saved as AUTOMATICALLY\_APPLIED; if no valid target exists, saved as AUTOMATICALLY\_DISCARDED. A power-up never removes a king or leaves a side already checkmated. | Should   | In progress |
-| PU-03 | As a player, I want to hold an AI power-up and choose when to use it, so that I can save it for the right moment.                  | GOOD\_AI and EVIL\_AI are saved as HELD; using one on my turn plays the AI move and sets USED; it cannot be used twice.                                                                                                                                 | Should   | In progress |
-| PU-04 | As a player, I want to see what power-up my opponent used and what it changed, so that the board change is not confusing.          | Over WebSocket both players receive a power-up message with type, player and affected squares.                                                                                                                                                          | Could    | Not started |
-| PU-05 | As a developer, I want power-up effects saved as events in the move history, so that ReplayHelper rebuilds exactly the same board. | Replaying a FUN game from the database gives the same board as before the restart; covered by a test with a fixed random seed.                                                                                                                          | Should   | Not started |
+| ID | User story | Acceptance criteria | Priority | Status |
+| --- | --- | --- | --- | --- |
+| PU-01 | As a player, I want to start a FUN mode game, so that I can play chess with power-ups. | POST /games with gameMode FUN creates the game; CLASSIC games never hand out power-ups. | Should | Not started |
+| PU-02 | As a player, I want instant power-ups to take effect when I earn them, so that the game gets a surprise twist. | KILL\_RANDOM\_PIECE, GAIN\_RANDOM\_PIECE and RANDOMIZE\_BOARD apply at once and are saved as AUTOMATICALLY\_APPLIED; if no valid target exists, saved as AUTOMATICALLY\_DISCARDED. A power-up never removes a king or leaves a side already checkmated. | Should | In progress |
+| PU-03 | As a player, I want to hold an AI power-up and choose when to use it, so that I can save it for the right moment. | GOOD\_AI and EVIL\_AI are saved as HELD; using one on my turn plays the AI move and sets USED; it cannot be used twice. | Should | In progress |
+| PU-04 | As a player, I want to see what power-up my opponent used and what it changed, so that the board change is not confusing. | Over WebSocket both players receive a power-up message with type, player and affected squares. | Could | Not started |
+| PU-05 | As a developer, I want power-up effects saved as events in the move history, so that ReplayHelper rebuilds exactly the same board. | Replaying a FUN game from the database gives the same board as before the restart; covered by a test with a fixed random seed. | Should | Not started |
 
 ## Epic 6: External APIs
 

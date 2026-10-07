@@ -1,0 +1,1331 @@
+<!doctype html>
+<html
+  lang="en"
+  dir="ltr"
+  class="scroll-smooth"
+  data-default-appearance="dark"
+  data-auto-appearance="true"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  
+    <meta http-equiv="content-language" content="en">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="theme-color">
+
+  
+  
+    <title>Week 8 &middot; Morten Helander</title>
+    <meta name="title" content="Week 8 &middot; Morten Helander">
+  
+
+  
+  
+  
+  
+  
+    
+  
+    
+  
+    
+  
+  
+    <meta name="description" content="User stories and working with AI">
+  
+  
+  
+  
+  <link rel="canonical" href="http://localhost:1313/updates/chessapi/week-8/">
+  
+  
+
+  
+  
+    <meta name="author" content="Morten Helander">
+  
+  
+
+  
+  <meta property="og:url" content="http://localhost:1313/updates/chessapi/week-8/">
+	<meta property="og:site_name" content="Morten Helander">
+	<meta property="og:title" content="Week 8">
+	<meta property="og:description" content="User stories and working with AI">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="updates">
+		<meta property="article:published_time" content="2026-10-07T00:00:00+00:00">
+		<meta property="article:modified_time" content="2026-10-07T00:00:00+00:00">
+		<meta property="og:image" content="http://localhost:1313/updates/chessapi/week-8/featured.jpg">
+
+  
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:image" content="http://localhost:1313/updates/chessapi/week-8/featured.jpg">
+	<meta name="twitter:title" content="Week 8">
+	<meta name="twitter:description" content="User stories and working with AI">
+
+  
+  
+  
+  
+    
+      
+    
+  
+    
+  
+    
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <link
+    type="text/css"
+    rel="stylesheet"
+    href="/css/main.bundle.min.fd48f105502e5557ac254be4c5b52ee23ca59131082edc681373f9eaadab32e3b730d9fe2f9770ec88790c8bcbe8581ba0adaf3b95d40d358a9cb52f2ca99929.css"
+    integrity="sha512-/UjxBVAuVVesJUvkxbUu4jylkTEILtxoE3P56q2rMuO3MNn&#43;L5dw7Ih5DIvL6FgboK2vO5XUDTWKnLUvLKmZKQ==">
+
+  
+  
+  <script
+    type="text/javascript"
+    src="/js/appearance.min.764f412f07ea715415e9123a5eb5f355429502d0b760146b9bcab854bc50829dee14488594acd935dfcdc6a0fe7e6d14d7bee914ebb9272b251aa238cb52c4dd.js"
+    integrity="sha512-dk9BLwfqcVQV6RI6XrXzVUKVAtC3YBRrm8q4VLxQgp3uFEiFlKzZNd/NxqD&#43;fm0U177pFOu5JyslGqI4y1LE3Q=="></script>
+  
+
+
+  
+  
+  
+  
+  
+  
+    
+    <script defer src="/lib/zoom/zoom.min.umd.b4b722fcb5d42f34f52b30a92f3521b69f403ca9d96d0d6179eb537cb870f5d83fdf1fe836688d95d5c99fefbda4170487711006e56051fa67ea00da10521721.js" integrity="sha512-tLci/LXULzT1KzCpLzUhtp9APKnZbQ1heetTfLhw9dg/3x/oNmiNldXJn&#43;&#43;9pBcEh3EQBuVgUfpn6gDaEFIXIQ=="></script>
+    
+    <script defer src="/js/medium-zoom.7f76d937fbb793f3703fedc60ee1e6345259cf2ada403d1876b806fffeaeb2ba6fc594eaccad75c96d5d2425e9fb833748bf1221b4d90d3cf78cf073e104f814.js" integrity="sha512-f3bZN/u3k/NwP&#43;3GDuHmNFJZzyraQD0YdrgG//6usrpvxZTqzK11yW1dJCXp&#43;4M3SL8SIbTZDTz3jPBz4QT4FA=="></script>
+  
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+    
+    
+    
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    <script
+      defer
+      type="text/javascript"
+      id="script-bundle"
+      src="/js/main.bundle.min.741242ef934dc59264f0354960792bb06fa5fdef01a762e81f6aaac0a68a8212fa27788ea81bcd0a1ea9bd62386a81012b4ba68043b2b6dfcb57b1b03845078d.js"
+      integrity="sha512-dBJC75NNxZJk8DVJYHkrsG&#43;l/e8Bp2LoH2qqwKaKghL6J3iOqBvNCh6pvWI4aoEBK0umgEOytt/LV7GwOEUHjQ=="
+      data-copy="Copy"
+      data-copied="Copied"></script>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+  
+
+  
+  <script type="application/ld+json">
+  [{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "articleSection": "Updates",
+    "name": "Week 8",
+    "headline": "Week 8",
+    
+    "inLanguage": "en",
+    "url" : "http://localhost:1313/updates/chessapi/week-8/",
+    "author" : {
+      "@type": "Person",
+      "name": "Morten Helander",
+      "image": "http://localhost:1313/img/logo.jpg"
+    },
+    "copyrightYear": "2026",
+    "dateCreated": "2026-10-07T00:00:00\u002b00:00",
+    "datePublished": "2026-10-07T00:00:00\u002b00:00",
+    
+    "dateModified": "2026-10-07T00:00:00\u002b00:00",
+    
+    
+    
+    "mainEntityOfPage": "http://localhost:1313/updates/chessapi/week-8/",
+    "wordCount":  2393 
+  }]
+  </script>
+
+
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <body class="flex flex-col h-screen m-auto leading-7 max-w-7xl px-6 sm:px-14 md:px-24 lg:px-32 text-lg bg-neutral text-neutral-900 dark:bg-neutral-800 dark:text-neutral bf-scrollbar">
+    <div id="the-top" class="absolute flex self-center">
+      <a
+        class="px-3 py-1 text-sm -translate-y-8 rounded-b-lg bg-primary-200 focus:translate-y-0 dark:bg-neutral-600"
+        href="#main-content">
+        <span class="font-bold text-primary-600 pe-2 dark:text-primary-400">&darr;</span>
+        Skip to main content
+      </a>
+    </div>
+    <header>
+      
+      
+        <div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+  
+    
+    
+      <div>
+        <a href="/" class="flex">
+          <span class="sr-only">Morten Helander</span>
+          
+            <img
+              src="/img/logo.png"
+              width="303"
+              height="243"
+              class="logo max-h-20 max-w-20 object-scale-down object-left nozoom"
+              alt="">
+          
+        </a>
+      </div>
+    
+  
+  
+    <a href="/" class="text-base font-medium truncate min-w-0 shrink">
+      Morten Helander
+    </a>
+  
+  <div class="flex items-center ms-auto">
+    <div class="hidden md:flex">
+      <nav aria-label="Main menu" class="flex items-center gap-x-5 h-12">
+  
+    
+      
+  
+    <a
+      href="/blog/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Blog"
+      title="Blogs">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Blog
+        </span>
+      
+    </a>
+  
+
+    
+      
+  
+    <a
+      href="/projects/"
+      
+      class="flex items-center bf-icon-color-hover"
+      aria-label="Projects"
+      title="Projects">
+      
+      
+        <span class="text-sm font-medium break-normal">
+          Projects
+        </span>
+      
+    </a>
+  
+
+    
+  
+
+  
+
+  
+
+  
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Switch to dark appearance"
+        type="button"
+        class="text-sm bf-icon-color-hover"
+        title="Switch to dark appearance">
+        <div class="flex items-center justify-center dark:hidden">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+        </div>
+        <div class="items-center justify-center hidden dark:flex">
+          <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+        </div>
+      </button>
+    </div>
+  
+
+  
+    <button
+      id="search-button"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center gap-2 rounded-lg border bf-border-color bf-border-color-hover bg-neutral-100/50 px-2 py-1 text-sm text-neutral-500 transition-colors hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral-400 dark:hover:text-primary-400"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+      <kbd
+        id="search-shortcut-hint"
+        class="pointer-events-none font-sans text-xs text-neutral-500 dark:text-neutral-400"
+        aria-hidden="true">
+        ⌘K
+      </kbd>
+    </button>
+  
+</nav>
+
+
+
+    </div>
+    <div class="flex md:hidden">
+      
+<div class="mobile-header-row mobile-menu-fullscreen relative flex items-center h-14 gap-4">
+  
+
+  
+    <button
+      id="appearance-switcher-mobile"
+      type="button"
+      aria-label="Switch to dark appearance"
+      title="Switch to dark appearance"
+      class="flex items-center justify-center text-neutral-900 hover:text-primary-600 dark:text-neutral-200 dark:hover:text-primary-400">
+      <div class="dark:hidden">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M32 256c0-123.8 100.3-224 223.8-224c11.36 0 29.7 1.668 40.9 3.746c9.616 1.777 11.75 14.63 3.279 19.44C245 86.5 211.2 144.6 211.2 207.8c0 109.7 99.71 193 208.3 172.3c9.561-1.805 16.28 9.324 10.11 16.95C387.9 448.6 324.8 480 255.8 480C132.1 480 32 379.6 32 256z"/></svg>
+</span>
+      </div>
+      <div class="hidden dark:block">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256 159.1c-53.02 0-95.1 42.98-95.1 95.1S202.1 351.1 256 351.1s95.1-42.98 95.1-95.1S309 159.1 256 159.1zM509.3 347L446.1 255.1l63.15-91.01c6.332-9.125 1.104-21.74-9.826-23.72l-109-19.7l-19.7-109c-1.975-10.93-14.59-16.16-23.72-9.824L256 65.89L164.1 2.736c-9.125-6.332-21.74-1.107-23.72 9.824L121.6 121.6L12.56 141.3C1.633 143.2-3.596 155.9 2.736 164.1L65.89 256l-63.15 91.01c-6.332 9.125-1.105 21.74 9.824 23.72l109 19.7l19.7 109c1.975 10.93 14.59 16.16 23.72 9.824L256 446.1l91.01 63.15c9.127 6.334 21.75 1.107 23.72-9.822l19.7-109l109-19.7C510.4 368.8 515.6 356.1 509.3 347zM256 383.1c-70.69 0-127.1-57.31-127.1-127.1c0-70.69 57.31-127.1 127.1-127.1s127.1 57.3 127.1 127.1C383.1 326.7 326.7 383.1 256 383.1z"/></svg>
+</span>
+      </div>
+    </button>
+  
+
+  
+    <button
+      id="search-button-mobile"
+      aria-label="Search (/ or ⌘K)"
+      class="flex items-center justify-center bf-icon-color-hover"
+      title="Search (/ or ⌘K)">
+      <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+    </button>
+  
+
+  
+    <input type="checkbox" id="mobile-menu-toggle" autocomplete="off" class="hidden peer">
+    <label
+      for="mobile-menu-toggle"
+      tabindex="0"
+      role="button"
+      aria-expanded="false"
+      aria-controls="mobile-menu-dialog"
+      aria-label="Main menu"
+      class="flex items-center justify-center cursor-pointer bf-icon-color-hover">
+      <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z"/></svg>
+</span>
+    </label>
+
+    <div
+      id="mobile-menu-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Main menu"
+      style="scrollbar-gutter: stable;"
+      class="z-50 invisible overflow-y-auto opacity-0 transition-[opacity,visibility] duration-300 peer-checked:visible peer-checked:opacity-100
+      
+        fixed inset-0 px-6 py-20 bg-neutral-50/97 dark:bg-neutral-900/99
+      
+      bf-scrollbar">
+      <label
+        for="mobile-menu-toggle"
+        tabindex="0"
+        role="button"
+        aria-expanded="false"
+        aria-controls="mobile-menu-dialog"
+        class="fixed end-8 top-5 z-50 h-12 w-12 rounded-full flex items-center justify-center cursor-pointer select-none bf-icon-color-hover border bf-border-color bf-border-color-hover bg-neutral-50 dark:bg-neutral-900">
+        <span class="sr-only">Close menu</span>
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </label>
+      <nav
+        aria-label="Mobile menu"
+        class="mx-auto max-w-md space-y-6">
+        
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/blog/"
+          aria-label="Blog"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Blogs" class="text-2xl font-bold tracking-tight">
+            Blog
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+    
+    <div class="px-2">
+      <div class="flex items-center gap-4">
+        <a
+          href="/projects/"
+          aria-label="Projects"
+          
+          class="flex grow items-center gap-4 group bf-icon-color-hover text-neutral-700 dark:text-neutral-200">
+          
+          <span title="Projects" class="text-2xl font-bold tracking-tight">
+            Projects
+          </span>
+        </a>
+        
+      </div>
+
+      
+    </div>
+  
+
+        
+  
+
+        
+  
+
+      </nav>
+    </div>
+  
+</div>
+
+
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+      
+    </header>
+    <div class="relative flex flex-col grow">
+      <main id="main-content" class="grow">
+        
+  
+  
+  
+  
+  <article>
+    
+    
+
+    
+    <header id="single_header" class="mt-5 max-w-prose">
+      
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        Week 8
+      </h1>
+      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
+        
+
+
+
+
+
+  
+  
+
+
+
+  
+
+  
+  
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  <div class="flex flex-row flex-wrap items-center">
+    
+    
+      <span>2393 words</span><span class="px-2 text-primary-500">&middot;</span><span title="Reading time">12 mins</span>
+    
+
+    
+    
+  </div>
+
+  
+
+  
+  
+    <div class="flex flex-row flex-wrap items-center">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+  
+
+
+      </div>
+      
+        
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+    
+      
+      
+<div class="flex author">
+  
+    
+    
+      
+    
+    
+      
+      
+      
+        
+        
+        
+      
+      <img
+        class="!mt-0 !mb-0 h-24 w-24 rounded-full me-4"
+        width="96"
+        height="96"
+        alt="Morten Helander"
+        src="/img/logo_hu_80be2e4834978d52.jpg"
+        data-zoom-src="/img/logo_hu_8210ea40b9478c34.jpg">
+    
+  
+  <div class="place-self-center">
+    
+      <div class="text-[0.6rem] uppercase leading-3 text-neutral-500 dark:text-neutral-400">
+        Author
+      </div>
+      <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
+        Morten Helander
+      </div>
+    
+    
+      <div class="text-sm text-neutral-700 dark:text-neutral-400">A little bit about you</div>
+    
+    <div class="text-2xl sm:text-lg">
+</div>
+  </div>
+</div>
+
+    
+  
+
+  
+    <div class="mb-5"></div>
+  
+
+      
+    </header>
+
+    
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      
+      
+      
+      
+      
+
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        
+
+        <div class="article-content max-w-prose mb-20">
+          
+<h2 class="relative group">User stories and working with AI
+    <div id="user-stories-and-working-with-ai" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#user-stories-and-working-with-ai" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>At the beginning of this week I remembered my poorly constructed and forgotten User-stories from the beggining of the project. I&rsquo;ve almost reached a point where classic chess is fully functional and I realized I was missing some structure, planning and DoD (definition of done). Together with ClaudeAI, I laid down my criteria for the exam and also my goals for what could be nice to have, but not essential. I got a markdown file which from Claude which had a pretty neat structure and somewhat correct ideas. I&rsquo;ve written an explanation for how to read it and edited the document to represent my own vision of the API. I could&rsquo;ve used GitHub&rsquo;s Kanban, but I discovered pretty early that when working solo it (at least to me) often felt like more work than actually helping. So this was a good quick solution instead:</p>
+
+<h1 class="relative group">Chess API – User Stories
+    <div id="chess-api--user-stories" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#chess-api--user-stories" aria-label="Anchor">#</a>
+    </span>
+    
+</h1>
+<p>Oct 7, 2026 · @Morten</p>
+
+<h2 class="relative group">How to read this
+    <div id="how-to-read-this" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#how-to-read-this" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<ul>
+<li><strong>Format:</strong> As a <em>role</em>, I want <em>goal</em>, so that <em>benefit</em>. Acceptance criteria are written as short testable checks, so they translate directly into JUnit or RestAssured tests.</li>
+<li><strong>Roles:</strong> <em>Player</em> (anyone in a game), <em>Registered user</em> (has an account), <em>Spectator</em> (watches a game), <em>Developer</em> (me).</li>
+<li><strong>Priority (MoSCoW):</strong> Must = needed for a playable classic game over WebSocket. Should = expected for the semester hand-in. Could = nice to have. Won&rsquo;t = parked for now.</li>
+<li><strong>Status:</strong> Set from the code as it currently stands, the different status codes are: Not started(depending on the priority status, may or may not be started depending on time left) Done(code works as intended and is tested thoroughly, might go to &ldquo;has bugs later).</li>
+</ul>
+<ol>
+<li>Not started: depending on the priority status, may or may not be started depending on time left.</li>
+<li>In progress: work on the acceptance criteria has begun, the process may or may not be in standby.</li>
+<li>Has bugs: the task either went from in progress and is now almost &ldquo;done&rdquo;, but has bugs that needs fixing, or the task went from &ldquo;done&rdquo; into &ldquo;has bugs&rdquo; after new discovery of errors.</li>
+<li>Done: code works as intended and is tested thoroughly, might go to &ldquo;has bugs later.</li>
+</ol>
+
+<h2 class="relative group">Epic 1: Classic chess rules
+    <div id="epic-1-classic-chess-rules" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#epic-1-classic-chess-rules" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The engine is the strongest part of the project: 7 of 9 stories are done, and the 3 with bugs each need a small, targeted fix.</p>
+<table>
+	<thead>
+			<tr>
+					<th>ID</th>
+					<th>User story</th>
+					<th>Acceptance criteria</th>
+					<th>Priority</th>
+					<th>Status</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>CR-01</td>
+					<td>As a player, I want each piece to move according to the rules, so that the game is real chess.</td>
+					<td>All six piece types only reach legal squares; pieces cannot jump except the knight; own pieces block, enemy pieces can be captured.</td>
+					<td>Must</td>
+					<td>Done</td>
+			</tr>
+			<tr>
+					<td>CR-02</td>
+					<td>As a player, I want moves that leave my king in check to be rejected, so that I cannot make an illegal move by accident.</td>
+					<td>Move that exposes or keeps own king in check returns 400 &ldquo;Illegal move&rdquo;; board and turn are unchanged.</td>
+					<td>Must</td>
+					<td>Done</td>
+			</tr>
+			<tr>
+					<td>CR-03</td>
+					<td>As a player, I want to castle on both sides, so that I can use a standard opening plan.</td>
+					<td>Allowed only if king and rook have not moved, squares between are empty, and king is not in, through or into check; rook lands on the correct square. Bugs: castling allowed with an enemy piece on G1/B1, and through a square attacked by a pawn.</td>
+					<td>Must</td>
+					<td>Done</td>
+			</tr>
+			<tr>
+					<td>CR-04</td>
+					<td>As a player, I want to capture en passant, so that pawn play follows the full rules.</td>
+					<td>Only on the move right after the enemy double step; the captured pawn is removed. Bug: en passant that exposes own king is accepted.</td>
+					<td>Must</td>
+					<td>Done</td>
+			</tr>
+			<tr>
+					<td>CR-05</td>
+					<td>As a player, I want to choose which piece my pawn promotes to, so that I can underpromote when it matters.</td>
+					<td>Pawn on last rank requires q, r, b or n; missing letter returns 400; stored UCI ends with the lowercase letter.</td>
+					<td>Must</td>
+					<td>Done</td>
+			</tr>
+			<tr>
+					<td>CR-06</td>
+					<td>As a player, I want the game to end at checkmate, so that a winner is declared.</td>
+					<td>Status becomes CHECKMATE, winner colour is set, further moves return 400 &ldquo;Game is finished&rdquo;.</td>
+					<td>Must</td>
+					<td>Done</td>
+			</tr>
+			<tr>
+					<td>CR-07</td>
+					<td>As a player, I want stalemate to end the game as a draw, so that the result is correct.</td>
+					<td>Status becomes DRAW with winner NO_COLOR; GET /games and GET /games/{id} still return 200. Bug: winner is stored as null and the GET endpoints return 500.</td>
+					<td>Must</td>
+					<td>Done</td>
+			</tr>
+			<tr>
+					<td>CR-08</td>
+					<td>As a player, I want to be told when my king is in check, so that the frontend can warn me.</td>
+					<td>Every move response and board state includes an inCheck flag for the side to move.</td>
+					<td>Must</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>CR-09</td>
+					<td>As a player, I want automatic draws by threefold repetition, the fifty-move rule and insufficient material, so that games cannot go on forever.</td>
+					<td>Each rule ends the game as DRAW with a reason; one test per rule.</td>
+					<td>Should</td>
+					<td>Not started</td>
+			</tr>
+	</tbody>
+</table>
+
+<h2 class="relative group">Epic 2: Game lifecycle
+    <div id="epic-2-game-lifecycle" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#epic-2-game-lifecycle" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Only move history works end to end today; creating and joining a game is the main blocker for anyone actually playing.</p>
+<table>
+	<thead>
+			<tr>
+					<th>ID</th>
+					<th>User story</th>
+					<th>Acceptance criteria</th>
+					<th>Priority</th>
+					<th>Status</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>GL-01</td>
+					<td>As a player, I want to start a new classic game, so that I can play without anyone touching the database.</td>
+					<td>POST /games creates the game and both players, returns 201 with the game id; white moves first. GameService.createGame exists but no route uses it.</td>
+					<td>Must</td>
+					<td>In progress</td>
+			</tr>
+			<tr>
+					<td>GL-02</td>
+					<td>As a player, I want to invite a friend with a game code, so that we end up in the same game.</td>
+					<td>Creator gets a short code; second player joins with it and is assigned the free colour; a full game rejects a third player.</td>
+					<td>Must</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>GL-03</td>
+					<td>As a player, I want to fetch the current board, so that the frontend can draw it without replaying every move.</td>
+					<td>Game response includes a FEN string (or a square-to-piece list), side to move and inCheck.</td>
+					<td>Must</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>GL-04</td>
+					<td>As a player, I want to see the legal moves of a selected piece, so that the frontend can highlight them.</td>
+					<td>GET /games/{id}/legal-moves?from=e2 returns the squares from MoveValidator.getLegalMoves; empty list if it is not that side&rsquo;s turn.</td>
+					<td>Should</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>GL-05</td>
+					<td>As a player, I want to resign, so that I can end a lost game.</td>
+					<td>Status becomes RESIGNED, the opponent is the winner, further moves return 400. Fills in the empty /finish endpoint.</td>
+					<td>Must</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>GL-06</td>
+					<td>As a player, I want to offer a draw that my opponent can accept or decline, so that we can agree on a result.</td>
+					<td>Offer is stored until the next move; accept ends the game as DRAW; a move by the opponent counts as a decline.</td>
+					<td>Should</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>GL-07</td>
+					<td>As a player, I want to see all moves of a game in order, so that I can review or replay it.</td>
+					<td>GET /games/{id}/moves returns moves sorted by move number with UCI and timestamp.</td>
+					<td>Should</td>
+					<td>Done</td>
+			</tr>
+	</tbody>
+</table>
+
+<h2 class="relative group">Epic 3: Real-time play over WebSocket
+    <div id="epic-3-real-time-play-over-websocket" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#epic-3-real-time-play-over-websocket" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>This is the semester goal and nothing exists yet, but moveAndShiftTurn can be reused as is, so most of the work is connection handling and broadcasting.</p>
+<table>
+	<thead>
+			<tr>
+					<th>ID</th>
+					<th>User story</th>
+					<th>Acceptance criteria</th>
+					<th>Priority</th>
+					<th>Status</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>WS-01</td>
+					<td>As a player, I want to connect to my game over a WebSocket, so that I get updates without refreshing.</td>
+					<td>ws://…/ws/games/{id} accepts the connection; unknown game id closes it with a reason; on connect the client receives the current board.</td>
+					<td>Must</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>WS-02</td>
+					<td>As a player, I want my move to show up on my opponent&rsquo;s screen right away, so that the game feels live.</td>
+					<td>Client sends a move message (from, to, promotionLetter); after a legal move every connection in that game receives the new board, last move and whose turn it is.</td>
+					<td>Must</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>WS-03</td>
+					<td>As a player, I want errors to go only to me, so that my opponent is not spammed by my mistakes.</td>
+					<td>Illegal move, wrong turn or bad JSON sends an error message to the sender only; the board is unchanged.</td>
+					<td>Must</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>WS-04</td>
+					<td>As a player, I want both of us to be notified when the game ends, so that nobody keeps waiting.</td>
+					<td>Checkmate, stalemate, resignation or agreed draw broadcasts a game-over message with status, winner and reason.</td>
+					<td>Must</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>WS-05</td>
+					<td>As a player, I want to rejoin after losing my connection, so that a network glitch does not cost me the game.</td>
+					<td>Reconnecting to the same game sends the full current board; moves made while away are not lost.</td>
+					<td>Should</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>WS-06</td>
+					<td>As a player, I want to know when my opponent disconnects, so that I know why they are not moving.</td>
+					<td>On close, the other player receives an opponent-left message; on return, an opponent-back message.</td>
+					<td>Should</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>WS-07</td>
+					<td>As a spectator, I want to watch a game live, so that I can follow friends&rsquo; games.</td>
+					<td>Spectator connection receives all broadcasts; any move message from a spectator is rejected.</td>
+					<td>Could</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>WS-08</td>
+					<td>As a developer, I want two moves sent at the same moment to be handled safely, so that the database never holds two moves for one turn.</td>
+					<td>The server responds with HTTP response 409 conflict if two moves are send simountaniously; only the first move is saved.</td>
+					<td>Must</td>
+					<td>In progress</td>
+			</tr>
+	</tbody>
+</table>
+
+<h2 class="relative group">Epic 4: Users and authentication
+    <div id="epic-4-users-and-authentication" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#epic-4-users-and-authentication" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The entities and DAOs are in place, but UserController is commented out and there is no login, so today anyone can move for both sides.</p>
+<table>
+	<thead>
+			<tr>
+					<th>ID</th>
+					<th>User story</th>
+					<th>Acceptance criteria</th>
+					<th>Priority</th>
+					<th>Status</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>US-01</td>
+					<td>As a visitor, I want to create an account, so that my games and stats are saved to me.</td>
+					<td>POST /users with username, email and password (min. 8 characters) returns 201; duplicate username or email returns 409; the password is stored hashed.</td>
+					<td>Must</td>
+					<td>In progress</td>
+			</tr>
+			<tr>
+					<td>US-02</td>
+					<td>As a registered user, I want to log in and receive a token, so that the server knows who I am.</td>
+					<td>POST /auth/login returns a token on valid credentials and 401 otherwise; protected routes and the WebSocket handshake require the token.</td>
+					<td>Must</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>US-03</td>
+					<td>As a player, I want only myself to be able to move my pieces, so that nobody can play my side.</td>
+					<td>The server compares the user from the token with the player of that colour; a mismatch returns 403 (an error message over WebSocket).</td>
+					<td>Must</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>US-04</td>
+					<td>As a registered user, I want to see a list of my past and ongoing games, so that I can resume or review them.</td>
+					<td>GET /users/{id}/games returns the user&rsquo;s games, newest first. GameDAO.getAllGamesByUserId already exists.</td>
+					<td>Should</td>
+					<td>In progress</td>
+			</tr>
+			<tr>
+					<td>US-05</td>
+					<td>As a registered user, I want to see my wins, losses and draws, so that I can follow my progress.</td>
+					<td>Stats update automatically when a game ends; GET /users/{id}/stats returns the totals.</td>
+					<td>Should</td>
+					<td>In progress</td>
+			</tr>
+			<tr>
+					<td>US-06</td>
+					<td>As a registered user, I want to edit or delete my profile, so that I control my own data.</td>
+					<td>PUT and DELETE /users/{id} work only for the logged-in user; deleting keeps finished games but anonymises the player.</td>
+					<td>Could</td>
+					<td>In progress</td>
+			</tr>
+	</tbody>
+</table>
+
+<h2 class="relative group">Epic 5: Fun mode power-ups
+    <div id="epic-5-fun-mode-power-ups" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#epic-5-fun-mode-power-ups" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The data model is ready (PlayerPowerUp, PowerUpType, PowerUpStatus), but no game logic uses it yet. PU-05 matters most: random effects break the replay-based board unless they are stored.</p>
+<table>
+	<thead>
+			<tr>
+					<th>ID</th>
+					<th>User story</th>
+					<th>Acceptance criteria</th>
+					<th>Priority</th>
+					<th>Status</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>PU-01</td>
+					<td>As a player, I want to start a FUN mode game, so that I can play chess with power-ups.</td>
+					<td>POST /games with gameMode FUN creates the game; CLASSIC games never hand out power-ups.</td>
+					<td>Should</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>PU-02</td>
+					<td>As a player, I want instant power-ups to take effect when I earn them, so that the game gets a surprise twist.</td>
+					<td>KILL_RANDOM_PIECE, GAIN_RANDOM_PIECE and RANDOMIZE_BOARD apply at once and are saved as AUTOMATICALLY_APPLIED; if no valid target exists, saved as AUTOMATICALLY_DISCARDED. A power-up never removes a king or leaves a side already checkmated.</td>
+					<td>Should</td>
+					<td>In progress</td>
+			</tr>
+			<tr>
+					<td>PU-03</td>
+					<td>As a player, I want to hold an AI power-up and choose when to use it, so that I can save it for the right moment.</td>
+					<td>GOOD_AI and EVIL_AI are saved as HELD; using one on my turn plays the AI move and sets USED; it cannot be used twice.</td>
+					<td>Should</td>
+					<td>In progress</td>
+			</tr>
+			<tr>
+					<td>PU-04</td>
+					<td>As a player, I want to see what power-up my opponent used and what it changed, so that the board change is not confusing.</td>
+					<td>Over WebSocket both players receive a power-up message with type, player and affected squares.</td>
+					<td>Could</td>
+					<td>Not started</td>
+			</tr>
+			<tr>
+					<td>PU-05</td>
+					<td>As a developer, I want power-up effects saved as events in the move history, so that ReplayHelper rebuilds exactly the same board.</td>
+					<td>Replaying a FUN game from the database gives the same board as before the restart; covered by a test with a fixed random seed.</td>
+					<td>Should</td>
+					<td>Not started</td>
+			</tr>
+	</tbody>
+</table>
+
+<h2 class="relative group">Epic 6: External APIs
+    <div id="epic-6-external-apis" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#epic-6-external-apis" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>The Lichess and Chess.com clients exist and have tests, but no endpoint exposes them; Stockfish is only prepared through the stored UCI strings.</p>
+<table>
+	<thead>
+			<tr>
+					<th>ID</th>
+					<th>User story</th>
+					<th>Acceptance criteria</th>
+					<th>Priority</th>
+					<th>Status</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>EX-01</td>
+					<td>As a player, I want to solve the Lichess daily puzzle in TRAINING mode, so that I can practise between games.</td>
+					<td>GET /puzzles/daily returns the puzzle; it is fetched once a day and cached in DailyPuzzle; a Lichess outage returns the cached puzzle or 503.</td>
+					<td>Should</td>
+					<td>In progress</td>
+			</tr>
+			<tr>
+					<td>EX-02</td>
+					<td>As a registered user, I want to link my Chess.com username, so that my profile shows my real ratings.</td>
+					<td>Linking checks that the username exists; rapid, blitz and bullet ratings are shown on the profile; an unknown username returns 404.</td>
+					<td>Could</td>
+					<td>In progress</td>
+			</tr>
+			<tr>
+					<td>EX-03</td>
+					<td>As a player, I want to play against a Stockfish AI, so that I can play when no friend is online.</td>
+					<td>A game can be created with an AI player (Player.isAi); after each human move the server sends the UCI history to Stockfish and plays its reply. GOOD_AI and EVIL_AI (PU-03) build on this.</td>
+					<td>Should</td>
+					<td>Not started</td>
+			</tr>
+	</tbody>
+</table>
+
+<h2 class="relative group">Suggested sprint order
+    <div id="suggested-sprint-order" class="anchor"></div>
+    
+    <span
+        class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+        <a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#suggested-sprint-order" aria-label="Anchor">#</a>
+    </span>
+    
+</h2>
+<p>Finish classic play over WebSocket first; power-ups and external APIs build on top of it.</p>
+<ol>
+<li><strong>Fix the engine:</strong> CR-07, CR-03, CR-04, each with a regression test.</li>
+<li><strong>Make a game playable through the API:</strong> GL-01, GL-03, CR-08, GL-05.</li>
+<li><strong>Go real-time:</strong> WS-01 to WS-04 and WS-08.</li>
+<li><strong>Know who is who:</strong> US-01, US-02, US-03, then add the token check to the WebSocket handshake.</li>
+<li><strong>Polish classic play:</strong> GL-02, GL-04, GL-06, CR-09, WS-05, WS-06, US-04, US-05.</li>
+<li><strong>Fun and training:</strong> PU-05 first, then PU-01 to PU-04, EX-01, EX-03.</li>
+<li><strong>If time allows:</strong> WS-07, US-06, EX-02.</li>
+</ol>
+
+          
+          
+          
+        </div>
+        
+        
+
+        
+
+        
+
+      </div>
+    </section>
+
+    
+    <footer class="pt-8 max-w-prose print:hidden">
+      
+  
+    
+    
+    
+    <div class="pt-8">
+      <hr class="border-dotted border-neutral-300 dark:border-neutral-600">
+      <div class="flex justify-between pt-3">
+        <span class="flex flex-col">
+          
+            <a
+              class="flex text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+              href="/updates/chessapi/week7/">
+              <span class="leading-6">
+                <span class="inline-block rtl:rotate-180">&larr;</span>&ensp;Week 7
+              </span>
+            </a>
+            
+          
+        </span>
+        <span class="flex flex-col items-end">
+          
+        </span>
+      </div>
+    </div>
+  
+
+
+      
+
+    </footer>
+  </article>
+
+        
+
+
+  
+
+
+
+
+
+
+<div
+  id="scroll-to-top"
+  class="fixed bottom-6 end-6 z-50 transform translate-y-4 opacity-0 duration-200">
+  <a
+    href="#the-top"
+    class="pointer-events-auto flex h-12 w-12 items-center justify-center rounded-full bg-neutral/50 text-xl text-neutral-700 hover:text-primary-600 dark:bg-neutral-800/50 dark:text-neutral dark:hover:text-primary-400"
+    aria-label="Scroll to top"
+    title="Scroll to top">
+    &uarr;
+  </a>
+</div>
+
+      </main><footer id="site-footer" class="py-10 print:hidden">
+  
+  
+    
+  
+  <div class="flex items-center justify-between">
+    
+    
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+          &copy;
+          2026
+          Morten Helander
+      </p>
+    
+
+    
+    
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        
+        
+        Powered by <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a> &amp; <a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>
+      </p>
+    
+  </div>
+  
+  
+</footer>
+<div
+  id="search-wrapper"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Search"
+  class="invisible fixed inset-0 flex h-screen w-screen cursor-default flex-col bg-neutral-500/50 p-4 backdrop-blur-sm dark:bg-neutral-900/50 sm:p-6 md:p-[10vh] lg:p-[12vh] z-500"
+  data-url="/">
+  <div
+    id="search-modal"
+    class="flex flex-col w-full max-w-3xl min-h-0 mx-auto border rounded-md shadow-lg top-20 border-neutral-200 bg-neutral dark:border-neutral-700 dark:bg-neutral-800">
+    <header class="relative z-10 flex items-center justify-between flex-none px-2">
+      <form class="flex items-center flex-auto min-w-0">
+        <div class="flex items-center justify-center w-8 h-8 text-neutral-400">
+          <span class="relative block icon"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" class="svg-inline--fa fa-search fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+</span>
+        </div>
+        <input
+          type="search"
+          id="search-query"
+          aria-label="Search"
+          class="flex flex-auto h-12 mx-1 bg-transparent appearance-none focus:outline-dotted focus:outline-2 focus:outline-transparent"
+          placeholder="Search"
+          tabindex="0">
+      </form>
+      <button
+        id="close-search-button"
+        class="flex items-center justify-center w-8 h-8 text-neutral-700 hover:text-primary-600 dark:text-neutral dark:hover:text-primary-400"
+        title="Close (Esc)">
+        <span class="relative block icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M310.6 361.4c12.5 12.5 12.5 32.75 0 45.25C304.4 412.9 296.2 416 288 416s-16.38-3.125-22.62-9.375L160 301.3L54.63 406.6C48.38 412.9 40.19 416 32 416S15.63 412.9 9.375 406.6c-12.5-12.5-12.5-32.75 0-45.25l105.4-105.4L9.375 150.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L160 210.8l105.4-105.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-105.4 105.4L310.6 361.4z"/></svg>
+</span>
+      </button>
+    </header>
+    <section class="flex-auto px-2 overflow-auto">
+      <ul id="search-results">
+        
+      </ul>
+    </section>
+  </div>
+</div>
+
+    </div>
+    
+    
+  </body>
+  
+</html>
