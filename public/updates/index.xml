@@ -9,7 +9,37 @@
     <managingEditor>morten.helander@hotmail.com (Morten Helander)</managingEditor>
     <webMaster>morten.helander@hotmail.com (Morten Helander)</webMaster>
     <copyright>© 2026 Morten Helander</copyright>
-    <lastBuildDate>Wed, 07 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/updates/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Oct 2026 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/updates/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Week 10</title>
+      <link>http://localhost:1313/updates/chessapi/week10/</link>
+      <pubDate>Sun, 25 Oct 2026 00:00:00 +0000</pubDate>
+      <author>morten.helander@hotmail.com (Morten Helander)</author>
+      <guid>http://localhost:1313/updates/chessapi/week10/</guid>
+      <description>Dev-Ops and deployment</description>
+      
+    </item>
+    
+    <item>
+      <title>Week 8</title>
+      <link>http://localhost:1313/updates/chessapi/week-9/</link>
+      <pubDate>Sun, 18 Oct 2026 00:00:00 +0000</pubDate>
+      <author>morten.helander@hotmail.com (Morten Helander)</author>
+      <guid>http://localhost:1313/updates/chessapi/week-9/</guid>
+      <description>Free time and lots of coding</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/updates/chessapi/week-9/featured.jpg" />
+    </item>
+    
+    <item>
+      <title>Week 8</title>
+      <link>http://localhost:1313/updates/chessapi/week-8-2/</link>
+      <pubDate>Sun, 11 Oct 2026 00:00:00 +0000</pubDate>
+      <author>morten.helander@hotmail.com (Morten Helander)</author>
+      <guid>http://localhost:1313/updates/chessapi/week-8-2/</guid>
+      <description>Security: JWT and BCrypt</description>
+      <media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:1313/updates/chessapi/week-8-2/featured.jpg" />
+    </item>
     
     <item>
       <title>Week 8</title>

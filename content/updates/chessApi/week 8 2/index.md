@@ -1,6 +1,6 @@
 ---
 title: "Week 8"
-date: 2026-10-07
+date: 2026-10-11
 draft: false
 project: "chessapi"
 header: "WeekEightPartTwo"
